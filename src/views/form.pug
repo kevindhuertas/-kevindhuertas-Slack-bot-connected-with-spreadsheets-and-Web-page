@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Formulario
+    body
+        div 
+            form(method="post" action="/form")
+                div
+                    label(for="titulo") Titulo:
+                    p
+                        input(type="text" placeholder="Escribe el nombre" name="Nombre")
+
+
+                div
+                    label(for="restaurante") restaurante:
+                    p
+                        input(type="text" placeholder="Escribe el restaurante" name="Restaurante")
+
+
+                div
+                    label(for="pedido") Pedido:
+                    p
+                        input(type="text" placeholder="Escribe el predido" name="Pedido")
+
+
+                div
+                    label(for="descripcion") descripcion:
+                    p
+                        input(type="text" placeholder="Escribe el predido" name="descripcion")
+                div
+                    button(type="submit") Guardar

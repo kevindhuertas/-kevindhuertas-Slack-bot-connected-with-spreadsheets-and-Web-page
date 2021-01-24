@@ -1,11 +1,18 @@
 const express = require('express');
-require('./spreadsheet');
+const bodyParser = require('body-parser');
+require('./spreadsheet'); //eliminar 
 
 const app = express();
 
+app.set('views', './src/views');
+app.set('view engine', 'pug');
+
+app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.json());
+
+
+
 //routes
-app.use (require('../routes/google.routes'));
-
-
+app.use (require('./routes/google.routes'));
 
 module.exports = app;

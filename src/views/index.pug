@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Google Videos 10 minutos
+    body
+        div 
+            ul
+                each registro, index in registros
+                        li #{registro.Nombre + ':' + registro.Restaurante + ' --> ' + registro.Pedido}
+            hr
+            p
+                a(href="/form") Ingresar nuevo
+                

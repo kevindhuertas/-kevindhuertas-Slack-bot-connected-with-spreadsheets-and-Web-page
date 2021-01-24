@@ -1,4 +1,4 @@
-//Tiempo demorado: 40 + 25 + 45
+//Tiempo demorado: 40 + 25 + 45 + 15 + 25 + 30
 const app = require('./app');
 
 
