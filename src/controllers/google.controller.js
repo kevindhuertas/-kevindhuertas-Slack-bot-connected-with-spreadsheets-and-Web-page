@@ -16,7 +16,8 @@ const pintarForm = (req,res)=>{
 }
 
 const guardarPedido = (req,res)=>{
-    googleSheet.guardarPedido(req.body); //Yo creo el metodo
+    console.log(req.body)
+    //googleSheet.guardarPedido(req.body); //Yo creo el metodo
     res.redirect('/');
 }
 

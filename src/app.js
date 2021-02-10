@@ -1,6 +1,8 @@
+//This app is for the web page 
+
 const express = require('express');
 const bodyParser = require('body-parser');
-require('./spreadsheet'); //eliminar 
+//eequire('./spreadsheet'); //eliminar 
 
 const app = express();
 
@@ -14,5 +16,5 @@ app.use(bodyParser.json());
 
 //routes
 app.use (require('./routes/google.routes'));
-
+console.log("App activada con su paguina web");
 module.exports = app;

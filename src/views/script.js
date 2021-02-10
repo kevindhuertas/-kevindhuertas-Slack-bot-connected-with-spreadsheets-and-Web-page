@@ -2,5 +2,4 @@
 
 
 
-
-document.
+console.log("hola");
