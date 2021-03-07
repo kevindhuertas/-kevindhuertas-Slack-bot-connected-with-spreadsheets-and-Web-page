@@ -6,6 +6,7 @@ let googleSheet = require('../spreadsheet');
 //Cuando abrimos la pagina web se va llamar a esta funcion de repuesta
 const obtenerVideos = async (req,res)=>{
     registros = await googleSheet.accederGoogleSheet();
+    console.log("La pagina se recargo ")
     //console.log(registros); //Me da info de la hoja cuando abro la pagina
     res.render('index', { registros });
 }

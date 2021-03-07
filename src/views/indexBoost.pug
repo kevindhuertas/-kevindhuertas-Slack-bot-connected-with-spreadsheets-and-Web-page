@@ -19,16 +19,16 @@ html(lang="en")
                     each registro, index in registros
                             div.card
                                 img.card-img(src="./fotoPerfil.jpg", alt="img")
-                                p.card-name #{registro.Name}
-                                p.card-info #{registro.Restaurant + ' --> ' + registro.Order} 
+                                p.card-name #{registro.Nombre}
+                                p.card-info #{registro.Restaurante + ' --> ' + registro.Pedido} 
                                 
 
                 div.group
                         each registro, index in registros
                                 div.card
                                     p Foto
-                                    p #{registro.Name}
-                                    p #{registro.Restaurant + ' --> ' + registro.Order} 
+                                    p #{registro.Nombre}
+                                    p #{registro.Restaurante + ' --> ' + registro.Pedido} 
                     
 
                
