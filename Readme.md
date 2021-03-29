@@ -21,3 +21,12 @@ And also We enable Google Sheet API.
 
 
 To start the whole application, start the src / index.js, which starts the server and the bot.
+
+Screenshots of application functionalities:
+<img width="1153" alt="Screen Shot 2021-03-29 at 17 11 21" src="https://user-images.githubusercontent.com/53805189/112906904-9860ef00-90b2-11eb-8517-6a764fa6262f.png">
+
+<img width="1187" alt="Screen Shot 2021-03-29 at 17 14 19" src="https://user-images.githubusercontent.com/53805189/112906927-9f87fd00-90b2-11eb-972e-5b88a6932c80.png">
+
+<img width="1064" alt="Screen Shot 2021-03-29 at 17 15 55" src="https://user-images.githubusercontent.com/53805189/112906943-a6167480-90b2-11eb-934b-401af5c50568.png">
+<img width="1343" alt="Screen Shot 2021-03-29 at 17 15 35" src="https://user-images.githubusercontent.com/53805189/112906947-a7e03800-90b2-11eb-8ab6-fb5a0a22ad0c.png">
+
