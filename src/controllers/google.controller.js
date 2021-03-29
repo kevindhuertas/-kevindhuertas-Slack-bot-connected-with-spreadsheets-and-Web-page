@@ -1,30 +1,28 @@
 //ESTO ES CONSTRUCTOR
 let googleSheet = require('../spreadsheet');
 
-
-
-//Cuando abrimos la pagina web se va llamar a esta funcion de repuesta
-const obtenerVideos = async (req,res)=>{
+//Get sheet from googleSpreadsheet
+const getSheet = async (req,res)=>{
     registros = await googleSheet.accederGoogleSheet();
-    console.log("La pagina se recargo ")
-    //console.log(registros); //Me da info de la hoja cuando abro la pagina
     res.render('index', { registros });
 }
 
-
-const pintarForm = (req,res)=>{
+const showForm = (req,res)=>{
     res.render('form', {});
 }
 
-const guardarPedido = (req,res)=>{
-    console.log(req.body)
-    //googleSheet.guardarPedido(req.body); //Yo creo el metodo
+
+const saveOrder = async (req,res)=>{
+    // ADD default image and descipction not undefined
+    if (req.body.description == '') req.body.description = ' ';
+    req.body.userImg = "http://eco-legal.com/wp-content/uploads/2018/09/default-profile.png"
+    
+    await googleSheet.saveOrder(req.body);
     res.redirect('/');
 }
 
-
 module.exports = {
-    obtenerVideos: obtenerVideos,
-    pintarForm: pintarForm,
-    guardarPedido: guardarPedido,
+    getSheet: getSheet,
+    showForm: showForm,
+    saveOrder: saveOrder,
 }
