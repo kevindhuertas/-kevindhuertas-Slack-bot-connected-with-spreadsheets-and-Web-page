@@ -29,13 +29,16 @@ html(lang="en")
                                 p.card-des #{registro.Order + ` ` + registro.description } 
             div.group
                 h2 Groups
-                div.row
-                    div.colum-img
-                        img.card-img(src= "https://avatars.slack-edge.com/2019-11-01/807404518595_289db322d1fe824e070f_original.jpg")
-                    div.colum-info
-                        p.card-name Todo alitas
-                        p.card-Res Destino: Alitas Bbq
-                        p.card-des Integrantes: Kevin, Daniel, Nicolas, Paul, Maria
+                each bot, index in Bot.parties
+                    div.row
+                        div.colum-img.img-group
+                            img.card-img(src= "https://capacidades.org/wp-content/uploads/2019/03/default-user.png ")
+                            img.card-img.imgOver(src= "https://capacidades.org/wp-content/uploads/2019/03/default-user.png")
+                            img.card-img.imgOver(src= "https://capacidades.org/wp-content/uploads/2019/03/default-user.png")
+                        div.colum-info
+                            p.card-name #{bot.groupName} #{bot.time} 
+                            p.card-Res #{bot.destination}
+                            p.card-des #{bot.passengers}
 
             div.group
                 h2 New Order

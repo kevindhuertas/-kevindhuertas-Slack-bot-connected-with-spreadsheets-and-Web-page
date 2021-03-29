@@ -3,11 +3,18 @@ class Group {
     constructor(pObjeto){
         //pObjeto = {"groupName": groupName, "groupCreator":groupCreator, "destination" : destination}
         this.groupName = pObjeto.groupName;
-        this.TimeRemaining = pObjeto.time;
+        this.time = pObjeto.time;
         this.destination = pObjeto.destination;
         this.passengers = [pObjeto.groupCreator];
+        this.groupCreatorId = pObjeto.groupCreatorId;
         this.groupCreator = pObjeto.groupCreator;
     }
+    SearchPasseger(user){
+        if( this.passengers.find(passengers => passengers === user) !=undefined){
+            return true
+        }else return false
+    }
+
 
     AddPassenger(passegerToAdd){
         if(this.passengers.includes(passegerToAdd) == false){
@@ -18,20 +25,19 @@ class Group {
     }
     
     //SI FUNCIONA TANnto para sacar como para cuando no esta en el grupo
-    LeaveCongaCommand(passenger){
+    LeavePassenger(passenger){
         if (this.passengers.includes(passenger) == true) {
             let i = this.passengers.indexOf( passenger );
              if ( i !== -1 ) {
                 this.passengers.splice( i, 1 );
               }              
-        }else{
-            console.log("No estas en el grupo :) ");
-        }
+            return true;
+        }else return false;
     }
 
 
     getInfo(){
-        let message = `Group name:${this.groupName} to ${this.destination} at ${conga.DepartureTime} with ${this.passengers} on it`;
+        let message = `Group name *${this.groupName}* to *${this.destination}* at *${this.time}* with *${this.passengers}* on it`;
         return message;
     }
 

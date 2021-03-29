@@ -73,6 +73,7 @@ flex-wrap: wrap;
     background-color: slategrey,.5;
     background: var(--rainbow);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .row:last-child {
@@ -89,15 +90,32 @@ max-width: 70px;
 min-width: auto;
 padding: 2px;
 justify-content: center;
-
 }
 .colum-img img{
     width: 100%;
     border-radius: 50%;
     margin: 0;
+}
+
+.colum-img.img-group img{
+    display: inline-flex;
 
 }
 
+.colum-img.img-group img:nth-child(2){
+    display: inline-flex;
+    position: absolute;
+    max-width: 70px;
+    min-width: auto;
+    margin-left: -63px;
+}
+.colum-img.img-group img:nth-child(3){
+    display: inline-flex;
+    position: absolute;
+    max-width: 70px;
+    min-width: auto;
+    margin-left: -56px;
+}
 
 /* ---------CARD-INFO --------*/
 .colum-info{

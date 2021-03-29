@@ -11,7 +11,6 @@ const newOrder = (message, channel,userData,id) => {
     let userName = userData.real_name;
     let userId = userData.id;
     let userImg = userData.profile.image_original;
-    //console.log(`${userName} ha pedido en: ${restaurant} con la orden: ${order} y descripcion: ${description}`)
     let body = {
         Id: userId,
         userImg: userImg,
@@ -28,6 +27,6 @@ const deleteOrder = (userName) =>{
 }
 
  module.exports = {
- "newOrder" : newOrder,
+ newOrder : newOrder,
  deleteOrder:deleteOrder,
  }
