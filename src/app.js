@@ -1,18 +1,14 @@
 //This app is for the web page 
-
 const express = require('express');
-const bodyParser = require('body-parser'); //Lo que nos permite traer datos json
-//eequire('./spreadsheet'); //eliminar 
+const bodyParser = require('body-parser');
+
 const app = express();
 
 app.set('views', './src/views');
 app.set('view engine', 'pug');
 
-
-
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
-
 
 
 //routes
