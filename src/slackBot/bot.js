@@ -93,11 +93,7 @@ const options = async(option, msg, channelId,userData,data) =>{
 
         case "help":
             let msgHelpOrder = `"*order* /Restaurant /order /description(optional)"\n"*delete my order*"`;
-            let msgHelpGroups = `"*see groups*"\n
-                                "*create group* /group name /destination /time(format HH:MM[AM/PM])"\n
-                                "*join group* /group name"\n
-                                "*leave group* /group name"\n
-                                "*delete group* /group name(Your must be the creator)\n`;
+            let msgHelpGroups = `"*see groups*"\n"*create group* /group name /destination /time(format HH:MM[AM/PM])"\n"*join group* /group name"\n"*leave group* /group name"\n"*delete group* /group name(Your must be the creator)\n`;
             bot.postMessage(channelId, `Hi! These are the thing that I can do:\n${msgHelpOrder}\n${msgHelpGroups}`);
             break;
 
